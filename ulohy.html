@@ -13,7 +13,21 @@
     </div>
     <script src="scripts/lista.js"></script>
     <script>
-    add_lista("ulohy")
+      add_lista("ulohy")
+
+      function download_ulohy(){
+        //ULOHY_URL = 'https://firebasestorage.googleapis.com/v0/b/tadovo-doucko.appspot.com/o/ulohy.txt?alt=media&token=724841f0-8c54-43c9-a9c4-eba1333023a3'
+        ULOHY_URL = 'ulohy.txt'
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+          }
+        };
+        xhttp.open("GET", ULOHY_URL, true);
+        xhttp.send();
+      }
     </script>
   </body>
 </html>
