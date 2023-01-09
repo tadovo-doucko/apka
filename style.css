@@ -58,6 +58,9 @@ h2{
 #lista a:not(.active):hover{
     background: #3d3d3d;
 }
+.tiny_lista{
+    font-size: 50% !important;
+}
 
 #hry-play{
     background: #262626;
