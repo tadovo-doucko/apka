@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" charset='utf-8'>
+  <meta name="human">
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <link rel="stylesheet" href="../style.css">
+  <title>Tádovo Doučko</title>
+  </head>
+  <body>
+    <img src="../imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
+    <div id="main">
+        <div id="pregame">
+            <h1 class='nadpis' style="margin-top:10px">Algebraické vzorce</h1>
+            <p style="font-size: 30px; text-align: center; font-style: italic;">generátor algebraický vzorců <span style="font-style: normal;">⚙️</span><br><br>používá mocnini až do 20²<br>a někdy desetiné <span style="font-style: normal;">📚</span></p>
+            <div id="hry-play" onclick="start_game_set(true)">▶</div>
+        </div>
+        <div style="text-align:center;display: none;" id="game">
+            <h2>algebraické vzorce</h2>
+            <h1 id="priklad"></h1>
+            <h1 id="out-txt" style="font-size: 40px;"></h1>
+            <div id="ciselnice">
+                <div onclick="ciselnice_press('1')">1</div>
+                <div onclick="ciselnice_press('2')">2</div>
+                <div onclick="ciselnice_press('3')">3</div>
+                <div onclick="ciselnice_press('4')">4</div>
+                <div onclick="ciselnice_press('5')">5</div>
+                <div onclick="ciselnice_press('6')">6</div>
+                <div onclick="ciselnice_press('7')">7</div>
+                <div onclick="ciselnice_press('8')">8</div>
+                <div onclick="ciselnice_press('9')">9</div>
+                <div onclick="ciselnice_press('0')">0</div>
+                <div onclick="ciselnice_press('²')">x²</div>
+                <div onclick="ciselnice_press('<-')">❌</div>
+                <div onclick="ciselnice_press(' + ')">➕</div>
+                <div onclick="ciselnice_press(' - ')">➖</div>
+                <div onclick="ciselnice_press('sub')">✔️</div>
+            </div>
+            <div id="result"><h1 id="result_symbol">❌</h1><h2>Špatně</h2><div id="hry-play" class="jnext" onclick="reset_priklad()">⏭</div><div id="spravna_odpoved"></div></div>
+        </div>
+    </div>
+    <script src="../scripts/lista.js"></script>
+    <script src="../scripts/hry.js"></script>
+    <script>
+    add_lista("hry", "../")
+    //above lista elements
+    window.setInterval(function(){update_element_above_lista(document.getElementById('hry-play'), 30)}, 1000);
+    update_element_above_lista(document.getElementById('hry-play'), 30)
+    //
+    window.setInterval(function(){update_element_above_lista(document.getElementById('ciselnice'), -10)}, 1000);
+    update_element_above_lista(document.getElementById('ciselnice'), -10)
+    //
+    window.setInterval(function(){update_element_above_lista(document.getElementsByClassName('jnext')[0], 30)}, 1000);
+    update_element_above_lista(document.getElementsByClassName('jnext')[0], 30)
+    text_out_e = document.getElementById('out-txt')
+    vysledek = ""
+
+    function generate_ctverec(){
+        a = generate_ctverec_clen()
+        b = generate_ctverec_clen()
+        
+        // ciselnice
+        to_destroy = Array.from(document.getElementsByClassName('destroy_me'))
+        for(i = 0; i < to_destroy.length; i++){
+            to_destroy[i].remove();
+        }
+
+        new_buttons = ""
+        if (a[1] != ""){new_buttons += `<div onclick="ciselnice_press('`+a[1]+`')" class="destroy_me">`+a[1]+`</div>`;}
+        if (b[1] != ""){new_buttons += `<div onclick="ciselnice_press('`+b[1]+`')" class="destroy_me">`+b[1]+`</div>`;}
+        if (a[0] < 1 || b[0] < 1) {new_buttons += `<div onclick="ciselnice_press('.')" class="destroy_me">.</div>`;}
+        if (new_buttons != "") { new_buttons += '<br class="destroy_me">'}
+        document.getElementById('ciselnice').innerHTML = new_buttons + document.getElementById('ciselnice').innerHTML
+        
+        znaminko = ["+", "-"][randrange(0, 1)]
+
+        zadani = "(" + a[0].toString() + a[1] + " " + znaminko + " " + b[0].toString() + b[1] + ")²"
+        vysledek = round_2_2d(a[0]**2).toString() + a[1] + ((a[1] != "") ? "² " : " ") + znaminko + " " + (a[0]*b[0]*2).toString() + a[1] + b[1] + " + " + round_2_2d(b[0]**2).toString() + b[1] + ((b[1] != "") ? "² " : " ")
+
+        return [zadani, vysledek]
+    }
+    function generate_ctverec_clen(){
+        neznama = "abcdefghijklmnopqrstuvwxyz"[randrange(0, 25)]
+        if(Math.random() > 0.9){
+            neznama = ""
+        }
+        cislo = randrange(0, 20)
+        if(cislo == 0){
+            cislo = randrange(1, 10) / 10
+        }
+        return [cislo, neznama]
+    }
+    function randrange(min, max){
+        return Math.round(Math.random() * (max - min) + min);
+    }
+    function show_priklad(){
+        text_out_e.innerHTML = ""
+        option = randrange(0, 1)
+        ctverec = generate_ctverec()
+        document.getElementById('priklad').innerHTML = ctverec[option]
+        if (option == 1) {
+            text_out_e.innerHTML = "()²"
+        }
+        vysledek = ctverec[Math.abs(option - 1)]
+    }
+    function reset_priklad(){
+        document.getElementById('result').style.display = 'none'
+        show_priklad()
+    }
+    function round_2_2d(value){
+        return Math.round(value * 100) / 100
+    }
+    function ciselnice_submit(){
+        odpoved = text_out_e.innerHTML
+        odpoved_array = split_up_cleny(odpoved)
+        vysledek_array = split_up_cleny(vysledek)
+        
+        correct = (odpoved_array.length == vysledek_array.length && odpoved_array.every((item)=>vysledek_array.includes(item)))
+
+        document.getElementById('result').style.display = 'block'
+        document.getElementById('result').style.background = ['#f71717', '#4dbe21'][correct ? 1 : 0]
+        document.getElementById('result_symbol').innerHTML = ['❌', '✔️'][correct ? 1 : 0]
+        document.getElementById('result').getElementsByTagName('h2')[0].innerHTML = ['Špatně', 'Správně'][correct ? 1 : 0]
+        if(!correct){
+            document.getElementById('spravna_odpoved').innerHTML = document.getElementById('priklad').innerHTML + "<br>=<br>" + vysledek + "<br><br>odpověděls:<br>" + odpoved 
+        } else {
+            document.getElementById('spravna_odpoved').innerHTML = ""
+        }
+    }
+    function split_up_cleny(value){
+        if(value[0] == "("){
+            value = value.slice(1, value.length - 2)
+        }
+        choped_up = value.split(" ")
+        out = []
+        for(i = 0; i < choped_up.length; i++){
+            if (choped_up[i] != "+" && choped_up[i] != "-" && choped_up[i] != ""){
+                if (i > 0 && choped_up[i - 1] == "-"){
+                    out.push("- "+choped_up[i])
+                } else {
+                    out.push(choped_up[i])
+                }
+            }
+        }
+        return out;
+    }
+    function ciselnice_press_event(){
+        if(vysledek[0] == "("){
+            text_out_e.innerHTML = "(" + text_out_e.innerHTML + ")²"
+        }
+    }
+
+    show_priklad()
+    </script>
+    <style>
+        #priklad{
+            font-size: 50px;
+        }
+        #result{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+            background: #4dbe21;
+        }
+        #result h1{
+            font-size: 60px;
+            position: relative;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        #result h2{
+            position: relative;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        #spravna_odpoved{
+            position: absolute;
+            top: 30px;
+            font-size: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+  </body>
+</html>
