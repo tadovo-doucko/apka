@@ -1,18 +1,18 @@
 ;|1
 Nadpis
-test úlohy
+test Ãºlohy
 jsou epic
-prostì jo
+prostÄ› jo
 *bold*
 ;|2
 Nadpis
-test úlohy
+test Ãºlohy
 jsou epic
-prostì jo
+prostÄ› jo
 *bold*
 ;|3
 Nadpis
-test úlohy
+test Ãºlohy
 jsou epic
-prostì jo
+prostÄ› jo
 *bold*
