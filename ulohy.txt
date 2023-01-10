@@ -3,7 +3,7 @@ Nadpis
 test úlohy
 jsou epic
 prostě jo
-*bold*
+<b>bold</b>
 ;|2
 Nadpis
 test úlohy
