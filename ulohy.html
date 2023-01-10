@@ -14,20 +14,40 @@
     <script src="scripts/lista.js"></script>
     <script>
       add_lista("ulohy")
+      ULOHY_URL = 'https://raw.githubusercontent.com/tadovo-doucko/apka/main/ulohy.txt'
 
-      function download_ulohy(){
-        //ULOHY_URL = 'https://firebasestorage.googleapis.com/v0/b/tadovo-doucko.appspot.com/o/ulohy.txt?alt=media&token=724841f0-8c54-43c9-a9c4-eba1333023a3'
-        ULOHY_URL = 'ulohy.txt'
+      function download_ulohy(url){
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            parse_ulohy(this.responseText);
           }
         };
-        xhttp.open("GET", ULOHY_URL, true);
+        xhttp.open("GET", url, true);
         xhttp.send();
       }
+
+      function parse_ulohy(ulohy_string){
+        console.log(ulohy_string)
+        ulohy = ulohy_string.split(";|");
+        ulohy.shift();
+        for(i=0; i < ulohy.length; i++){
+          lines = ulohy[i].split("\n")
+          description = ""
+          for(x = 2; x < lines.length; x++){
+            description += format_string_effects(lines[x]) + ((x >= lines.length - 1) ? "" : "<br>");
+          }
+          document.getElementById("main").innerHTML += '<div class="box-link"><h1>'+ lines[1] +'</h1><h2>'+ description +'</h2></div><br>';
+          console.log(description)
+        }
+        console.log(ulohy);
+      }
+
+      function format_string_effects(str){
+        return str.replace("<b>", "<span style='font-weight: 3000;'>").replace("</b>", "</span>")
+      }
+      download_ulohy(ULOHY_URL)
     </script>
   </body>
 </html>
