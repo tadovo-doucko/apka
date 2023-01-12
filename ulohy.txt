@@ -1,9 +1,6 @@
 ;|1
-Nadpis
-test úlohy
-jsou epic
-prostě jo
-<b>bold</b>
+ÚLOHA PRVNÍ
+jen test
 ;|2
 Nadpis
 test úlohy
