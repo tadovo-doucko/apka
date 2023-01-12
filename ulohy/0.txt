@@ -1,2 +1,2 @@
 ÚLOHA PRVNÍ
-testuji se <b>sám</b>, zda vůbec udělám úlohu na zobrazování úloh.
+<i>testuji se <b>sám</b>, zda vůbec udělám úlohu na zobrazování úloh.</i>
