@@ -1,0 +1,4 @@
+Minutová rovnice
+Dvě cihly váží kilo a ¾ cihly.
+Kolik gramů váží jedna cihla?
+/odpoved/800g/vysvetleni/správně je 800g, označíme váhu cihly jako x, pak:<br>2x = 1 + ¾x
