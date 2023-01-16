@@ -1,3 +1,4 @@
+Vizuální na obsah
 <h2>a je polovina strany čtverce</h2>
 <h2>modře štrafovaná část je 56cm²</h2>
 <img src="imgs/ulohy/0.png">
