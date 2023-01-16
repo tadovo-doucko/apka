@@ -10,5 +10,5 @@ kanál zde:
 <i>tady jsou určitý videa:</i>
 <br>
 <a href="https://www.youtube.com/watch?v=q63MItQHCSs" style="color:#00A9FF;">https://www.youtube.com/watch?v=q63MItQHCSs</a><br><br>
-<i>tady třeba pyt. trojce</i><a href="https://www.youtube.com/watch?v=hPfh0_2ve4M" style="color:#00A9FF;">https://www.youtube.com/watch?v=hPfh0_2ve4M</a><br><br>
-<i>procenta</i><a href="https://www.youtube.com/watch?v=qmn4lp1hjg4" style="color:#00A9FF;">https://www.youtube.com/watch?v=qmn4lp1hjg4</a>
+<i>tady třeba pyt. trojce:</i><br><a href="https://www.youtube.com/watch?v=hPfh0_2ve4M" style="color:#00A9FF;">https://www.youtube.com/watch?v=hPfh0_2ve4M</a><br><br>
+<i>procenta:</i><br><a href="https://www.youtube.com/watch?v=qmn4lp1hjg4" style="color:#00A9FF;">https://www.youtube.com/watch?v=qmn4lp1hjg4</a>
