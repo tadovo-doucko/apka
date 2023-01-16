@@ -8,17 +8,18 @@
   <title>Tádovo Doučko</title>
   </head>
   <body>
-    <img src="../imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
-    <div id="main">
+      <img src="../imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
+      <div id="main">
         <div id="pregame">
             <h1 class='nadpis' style="margin-top:10px">Algebraické vzorce</h1>
-            <p style="font-size: 30px; text-align: center; font-style: italic;">generátor algebraický vzorců <span style="font-style: normal;">⚙️</span><br><br>používá mocnini až do 20²<br>a někdy desetiné <span style="font-style: normal;">📚</span></p>
-            <div id="hry-play" onclick="start_game_set(true)">▶</div>
+            <p style="font-size: 30px; text-align: center; font-style: italic;">generátor algebraický vzorců <span class="em">⚙️</span><br><br>používá mocnini až do 20²<br>a někdy desetiné <span style="font-style: normal;">📚</span></p>
+            <div id="hry-play" onclick="start_game_set(true);update_ciselcine_size(document.getElementById('out-txt'))">▶</div>
         </div>
         <div style="text-align:center;display: none;" id="game">
             <h2>algebraické vzorce</h2>
             <h1 id="priklad"></h1>
             <h1 id="out-txt" style="font-size: 40px;"></h1>
+
             <div id="ciselnice">
                 <div onclick="ciselnice_press('1')">1</div>
                 <div onclick="ciselnice_press('2')">2</div>
@@ -45,10 +46,10 @@
     add_lista("hry", "../", true)
     //above lista elements
     window.setInterval(function(){update_element_above_lista(document.getElementById('hry-play'), 30)}, 1000);
-    update_element_above_lista(document.getElementById('hry-play'), 30)
-    //
-    window.setInterval(function(){update_element_above_lista(document.getElementById('ciselnice'), -10)}, 1000);
-    update_element_above_lista(document.getElementById('ciselnice'), -10)
+    update_element_above_lista(document.getElementById('hry-play'), 30);
+   
+    window.setInterval(function(){update_ciselcine_size(document.getElementById('out-txt'))}, 1000);
+    update_ciselcine_size(document.getElementById('out-txt'))
     //
     window.setInterval(function(){update_element_above_lista(document.getElementsByClassName('jnext')[0], 30)}, 1000);
     update_element_above_lista(document.getElementsByClassName('jnext')[0], 30)
@@ -75,7 +76,7 @@
         znaminko = ["+", "-"][randrange(0, 1)]
 
         zadani = "(" + a[0].toString() + a[1] + " " + znaminko + " " + b[0].toString() + b[1] + ")²"
-        vysledek = round_2_2d(a[0]**2).toString() + a[1] + ((a[1] != "") ? "² " : " ") + znaminko + " " + (a[0]*b[0]*2).toString() + a[1] + b[1] + " + " + round_2_2d(b[0]**2).toString() + b[1] + ((b[1] != "") ? "² " : " ")
+        vysledek = round_2_2d(a[0]**2).toString() + a[1] + ((a[1] != "") ? "² " : " ") + znaminko + " " + round_2_2d(a[0]*b[0]*2).toString() + a[1] + b[1] + " + " + round_2_2d(b[0]**2).toString() + b[1] + ((b[1] != "") ? "² " : " ")
 
         return [zadani, vysledek]
     }
@@ -100,7 +101,10 @@
         document.getElementById('priklad').innerHTML = ctverec[option]
         if (option == 1) {
             text_out_e.innerHTML = "()²"
+        } else {
+            text_out_e.innerHTML = "<span style='font-style:italic'>zjednoduš</span>"
         }
+        update_ciselcine_size(document.getElementById('out-txt'))
         vysledek = ctverec[Math.abs(option - 1)]
     }
     function reset_priklad(){
@@ -147,9 +151,28 @@
     function ciselnice_press_event(){
         if(vysledek[0] == "("){
             text_out_e.innerHTML = "(" + text_out_e.innerHTML + ")²"
+        } else if (text_out_e.innerHTML == "") {
+            text_out_e.innerHTML = "<span style='font-style:italic'>zjednoduš</span>";
         }
     }
-
+    function ciselnice_press(text){
+        if(text_out_e.innerHTML[0] == "<"){
+            text_out_e.innerHTML = ""
+        }
+        if(text_out_e.innerHTML[0] == "("){
+            text_out_e.innerHTML = text_out_e.innerHTML.slice(1, text_out_e.innerHTML.length - 2)
+        }
+        if(text == "<-"){
+            out_txt = text_out_e.innerHTML
+            
+            text_out_e.innerHTML = text_out_e.innerHTML.slice(0, out_txt.length - 1 - ((out_txt[out_txt.length - 1] == " ") ? 2 : 0))
+        } else if(text == 'sub') {
+            ciselnice_submit()
+        } else {
+            text_out_e.innerHTML += text
+        }
+        ciselnice_press_event()
+    }
     show_priklad()
     </script>
     <style>
@@ -157,30 +180,6 @@
             font-size: 50px;
             margin-top: 0px;
             margin-bottom: 5px;
-        }
-        #result{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            display: none;
-            background: #4dbe21;
-        }
-        #result h1{
-            font-size: 60px;
-            position: relative;
-            top: 40%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-        }
-        #result h2{
-            position: relative;
-            top: 35%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
         }
         #spravna_odpoved{
             position: absolute;

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" charset='utf-8'>
+  <meta name="human">
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <link rel="stylesheet" href="../style.css">
+  <title>Tádovo Doučko</title>
+  </head>
+  <body onkeypress="keyEvents(event)">
+      <img src="../imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
+      <div id="main">
+        <div id="pregame">
+            <h1 class='nadpis' style="margin-top:10px">Haďák</h1>
+            <p style="font-size: 30px; text-align: center; font-style: italic;">
+                prostě had<span class="em">🐍</span>
+                <br><br>
+                na PC jde použít i WSAD
+                <br><br>
+                jen rychlá oddechová záležitost<span class="em">🎮</span>
+            </p>
+            <div id="hry-play" onclick="start_game_set(true)">▶</div>
+        </div>
+        <div style="text-align:center;display: none;" id="game">
+            <h2>had</h2>
+            <canvas id="c" width="400" height="400"></canvas>
+            <div id="ciselnice">
+                <div onmousedown="chDir([0, -1])">🔼</div><br>
+                <div onmousedown="chDir([-1, 0])">◀️</div>
+                <div onmousedown="chDir([1, 0])">▶️</div><br>
+                <div onmousedown="chDir([0, 1])">🔽</div><br>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/lista.js"></script>
+    <script src="../scripts/hry.js"></script>
+    <script>
+    add_lista("hry", "../", true)
+    //above lista elements
+    window.setInterval(function(){update_element_above_lista(document.getElementById('hry-play'), 30)}, 1000);
+    update_element_above_lista(document.getElementById('hry-play'), 30);
+    window.setInterval("r()", 100);
+    window.setInterval("u()", 500);
+    window.setInterval('update_canvas_size()', 1000);
+    window.setInterval('update_ciselcine_size(document.getElementById("c"))', 1000);
+    update_ciselcine_size(document.getElementById('c'))
+    var c = document.getElementById("c");
+    var p = 0;
+     var dir = [0, 1];
+    var aP = [200, 200];
+    var path = [];
+    s();
+    function s(){
+        p = 0;
+        path = [[0,0], [40, 0], [40, 40]];
+        dir = [0, 1];
+    }
+    function r(){
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#161616";
+        ctx.fillRect(0, 0, c.width, c.height);
+
+        ctx.font = "bold 300px 'Caladea'";
+        ctx.fillStyle = "#FF6D58";
+        ctx.textAlign = "center";
+        ctx.fillText(p.toString(), c.width / 2, c.height / 1.25); 
+    
+        ctx.fillStyle = "#FFF";
+        ctx.fillRect(aP[0], aP[1], 40, 40);
+        ctx.fillStyle = "#FF0F53";
+        ctx.fillRect(aP[0] + 5, aP[1] + 5, 30, 30);
+        ctx.fillStyle = "#FF0F53";
+        for (let i = 0; i < path.length; i++) {
+            ctx.fillRect(path[i][0], path[i][1], 40, 40);
+        }       
+    }
+    function add(){
+        p++;
+        let ldir = [Math.max(-1, Math.min(path[1][0] - path[0][0], 1)), Math.max(-1, Math.min(path[1][1] - path[0][1], 1))]
+        path.unshift([path[0][0] - 40 * ldir[0],  path[0][1] - 40 * ldir[1]]);
+    }
+    function u(){
+        let p = [path[path.length - 1][0] + 40 * dir[0],  path[path.length - 1][1] + 40 * dir[1]];
+        console.log(pD(p));        if(p[0] >= 400 || p[0] <= -40 || p[1] <= -40 || p[1] >= 400 || pD(p)){
+            s();
+            return;
+        }
+        path.push(p);
+        path.shift();
+        if(aP[0] == p[0] && aP[1] == p[1]){a();}
+    }
+        function a(){
+            var p = [Math.floor(Math.random() * 10) * 40, Math.floor(Math.random() * 10) * 40];
+            if(pD(p)){
+                a();
+                return;
+            }
+            aP = p;
+            add();
+        }
+        function chDir(val){
+            if(val[0] * -1 == dir[0] || val[1] * -1 == dir[1]){
+                return;
+            }
+            dir = val;
+        }
+        function pD(p){
+            for (let i = 0; i < path.length; i++) {
+                if(path[i][0] == p[0] && path[i][1] == p[1]){return true};
+            }
+            return false;
+        }
+        function keyEvents(event){
+            if (event.keyCode == 119){
+                chDir([0, -1])
+            }
+            if(event.keyCode == 115){
+                chDir([0, 1])
+            }
+            if(event.keyCode == 97){
+                chDir([-1, 0])
+            }
+            if(event.keyCode == 100){
+                chDir([1, 0])
+            }
+        }
+        function update_canvas_size(){
+            size = "height:" + window.innerHeight * 0.5 + "px";
+            if (screen.height * 0.5 > window.innerWidth * .9){
+                size = "width:" + screen.width * 0.9 + "px";
+            }
+            document.getElementById('c').setAttribute('style', size)
+        }
+    update_canvas_size()
+    </script>
+    <style>
+        #priklad{
+            font-size: 50px;
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+        #spravna_odpoved{
+            position: absolute;
+            top: 30px;
+            font-size: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        #c{
+            position: absolute;
+            border-radius: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+  </body>
+</html>
