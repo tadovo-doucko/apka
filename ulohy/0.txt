@@ -1,5 +1,5 @@
 Vizuální na obsah
-a<i>je polovina strany čtverce</i><br>
+a <i>je polovina strany čtverce</i><br>
 <i>modře štrafovaná část je 56cm²</i><br>
 <img src="imgs/ulohy/0.png"><br>
 <i>Vypočítej obsah trojúleníku v cm²</i>
