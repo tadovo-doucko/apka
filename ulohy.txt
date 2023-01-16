@@ -1,12 +1,9 @@
 ;|1
-ÚLOHA PRVNÍ
-jen test
+Nádrže na mléko
+slovní úloha na několik rovnic o několika neznámých
 ;|2
-Nadpis
-test úlohy
-jsou epic
-prostě jo
-*bold*
+Minutová rovnice
+malá rychlá rovnice
 ;|3
 Nadpis
 test úlohy
