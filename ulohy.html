@@ -9,45 +9,96 @@
   </head>
   <body>
     <img src="imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
-    <div id="main"><h1 class='nadpis' style="margin-top:10px">Úlohy</h1>
+    <div id="main">
+      <div id="selection">
+        <h1 class='nadpis' style="margin-top:10px">Úlohy</h1>
+        <h2 style="text-align: center;">
+          jenom samostatné úlohy <span class="em">📋</span>
+          <br>
+          <br>
+          s kontrolou výsledků a vysvětlením
+        </h2>
+        <br>
+        <h2 style="text-align: center;">zde:</h2>
+        <h2 id="loading"></h2>
+      </div>
+      <div id="clanek" style="text-align:center;display: none;">
+        <h1 class='nadpis' style="margin-top:10px" id="nadpis">Nadpis</h1>
+        <p id="text" style="font-size: 30px;"></p>
+        <input type="text" id="odpoved">
+        <div id="submit" onclick="submit()">Zkontrolovat</div>
+        <p id="text" style="font-size: 30px;"></p>
+        <div id="result"><h1 id="result_symbol">❌</h1><h2>Špatně</h2><div id="vysvetleni"></div><div id="hry-play" onclick="back()">ok</div></div>
+      </div>
     </div>
     <script src="scripts/lista.js"></script>
+    <script src="scripts/clanky.js"></script>
+    <script src="scripts/hry.js"></script>
     <script>
-      add_lista("ulohy")
-      ULOHY_URL = 'https://raw.githubusercontent.com/tadovo-doucko/apka/main/ulohy.txt'
-
-      function download_ulohy(url){
-
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            parse_ulohy(this.responseText);
-          }
-        };
-        xhttp.open("GET", url, true);
-        xhttp.send();
+      add_lista("ulohy");
+      ULOHY_URL = 'https://raw.githubusercontent.com/tadovo-doucko/apka/main/ulohy.txt';
+      CLANKY_FOLDER = 'https://raw.githubusercontent.com/tadovo-doucko/apka/main/ulohy/';
+      ODPOVED = ""
+      //
+      window.setInterval(function(){update_element_above_lista(document.getElementById('hry-play'), 30)}, 1000);
+      update_element_above_lista(document.getElementById('hry-play'), 30);
+      
+      function display_clanek(text){
+        lines =  text.split("\n");
+        document.getElementById('nadpis').innerHTML = lines[0];
+        lines.shift();
+        text = lines.join("\n").split('/odpoved/')
+        ODPOVED = text[1]
+        document.getElementById('text').innerHTML = format_string_effects(text[0]);
+        document.getElementById('loading').style.display = "none";
+      }
+      function submit(){
+        correct = ODPOVED.split("/vysvetleni/")[0] == document.getElementById('odpoved').value
+        
+        document.getElementById('result').style.display = 'block'
+        document.getElementById('result').style.background = ['#f71717', '#4dbe21'][correct ? 1 : 0]
+        document.getElementById('result_symbol').innerHTML = ['❌', '✔️'][correct ? 1 : 0]
+        document.getElementById('result').getElementsByTagName('h2')[0].innerHTML = ['Špatně', 'Správně'][correct ? 1 : 0]
+        document.getElementById('vysvetleni').innerHTML = ODPOVED.split("/vysvetleni/")[1]
+      }
+      
+      function back(){
+        document.getElementById('result').style.display = 'none';
       }
 
-      function parse_ulohy(ulohy_string){
-        console.log(ulohy_string)
-        ulohy = ulohy_string.split(";|");
-        ulohy.shift();
-        for(i=0; i < ulohy.length; i++){
-          lines = ulohy[i].split("\n")
-          description = ""
-          for(x = 2; x < lines.length; x++){
-            description += format_string_effects(lines[x]) + ((x >= lines.length - 1) ? "" : "<br>");
-          }
-          document.getElementById("main").innerHTML += '<div class="box-link"><h1>'+ lines[1] +'</h1><h2>'+ description +'</h2></div><br>';
-          console.log(description)
-        }
-        console.log(ulohy);
-      }
-
-      function format_string_effects(str){
-        return str.replace("<b>", "<span style='font-weight: 3000;'>").replace("</b>", "</span>")
-      }
-      download_ulohy(ULOHY_URL)
+      download_ulohy(ULOHY_URL, function(){if (this.readyState == 4 && this.status == 200) {parse_ulohy(this.responseText);}});
     </script>
+    <style>
+      #submit{
+        border-radius: 10px;
+        width: 90%;
+        max-width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 20px;
+        background: #262626;
+        color:#FF0F53;
+        user-select: none;
+        margin-top: 30px;
+      }
+      #submit:hover{
+        background: #3d3d3d;
+      }
+      #submit:active{
+        background: #313131;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%) scale(0.85);
+      }
+      #vysvetleni{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 60px;
+        font-size: 40px;
+        width: 100%;
+      }
+    </style>
   </body>
 </html>

@@ -5,7 +5,6 @@ html, body {
 body{
     background-color: #FF0F53;
     background-image: linear-gradient(90deg, #FF0F53, #FF6D58);
-    
     margin: 0px;
 }
 *{
@@ -48,8 +47,11 @@ h2{
     padding-bottom: 2%;
     text-decoration: none;
     text-align: center;
-    font-size: 280%;
+    font-size: 48px;
     background: #262626;
+}
+#lista a img{
+    width: 48px;
 }
 #lista .active{
     background: #8f8f8f;
@@ -58,8 +60,8 @@ h2{
 #lista a:not(.active):hover{
     background: #3d3d3d;
 }
-.tiny_lista{
-    font-size: 50% !important;
+.tiny_lista a{
+    font-size: 150% !important;
 }
 
 #hry-play{
@@ -72,10 +74,15 @@ h2{
     width: 90%;
     bottom: 20%;
     font-size: 40px;
+    max-width: 500px;
     border-radius: 20px;
 }
 #hry-play:hover{
     background: #3d3d3d;
+}
+#hry-play:active{
+    background: #313131;
+    transform: translateX(-50%) scale(0.85);
 }
 #ciselnice div{
     width: 32%;
@@ -91,7 +98,7 @@ h2{
     background: #262626;
 }
 #ciselnice div:active{
-    background: #313131;
+    background: #696969;
     transform: scale(0.85);
 }
 #ciselnice{
@@ -101,8 +108,8 @@ h2{
     width: 100%;
     transform: translateX(-50%);
     background: #161616;
-    padding-bottom: 3%;
-    padding-top: 3%;
+    padding-bottom: 10px;
+    padding-top: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -132,4 +139,46 @@ h2{
     background: #696969;
     transform: translateX(-50%) scale(0.95);
     user-select: none;
+}
+#odpoved{
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #161616;
+    outline-width: 0px;
+    font-size: 30px;
+    width: 90%;
+    max-width: 200px;
+    text-align: center;
+}
+#result{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background: #4dbe21;
+}
+#result h1{
+    font-size: 60px;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#result h2{
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.em{
+    font-style: normal;
+}
+#loading{
+    text-align: center;
+    font-size: 50px;
 }

@@ -9,14 +9,35 @@
   </head>
   <body>
     <img src="imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
-    <div id="main"><h1 class='nadpis' style="margin-top:10px">Tipy a triky</h1></div>
-    <div style="text-align: center;">
-      <h2>jsou tu články 📑</h2>
-      <h2>linky na dobrá videa 📺</h2>
+    <div id="main">
+      <div id="selection"style="text-align: center;">
+        <h1 class='nadpis' style="margin-top:10px">Tipy a triky</h1>
+        <h2>jsou tu články <span class="em">📑</span></h2>
+        <h2>tipy a triky probrané do větší hloublky</h2>
+        <h2>linky na dobrá videa <span class="em">📺</span></h2>
+        <br>
+        <h2>zde:</h2>
+        <h2 id="loading"></h2>
+      </div>
+      <div id="clanek" style="text-align:center;display: none;">
+        <h1 class='nadpis' style="margin-top:10px" id="nadpis">Nadpis</h1>
+        <p id="text" style="font-size: 30px;"></p>
+      </div>
     </div>
     <script src="scripts/lista.js"></script>
+    <script src="scripts/clanky.js"></script>
     <script>
     add_lista("tipy")
+    ULOHY_URL = 'https://raw.githubusercontent.com/tadovo-doucko/apka/main/tipy.txt';
+    CLANKY_FOLDER = 'https://raw.githubusercontent.com/tadovo-doucko/apka/main/tipy/';
+    function display_clanek(text){
+        lines =  text.split("\n");
+        document.getElementById('nadpis').innerHTML = lines[0];
+        lines.shift()
+        document.getElementById('text').innerHTML = format_string_effects(lines.join('\n'));
+        document.getElementById('loading').style.display = "none";
+    }
+    download_ulohy(ULOHY_URL, function(){if (this.readyState == 4 && this.status == 200) {parse_ulohy(this.responseText);}});
     </script>
   </body>
 </html>
