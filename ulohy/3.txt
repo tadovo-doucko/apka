@@ -1,4 +1,4 @@
 Úloha na pyt. větu
-<img src="imgs/3.png">
+<img src="imgs/ulohy/3.png">
 <i>Kolik cm je vzálenost mezi bodem A a P?</i>
-/odpoved/10/vysvetleni/<img src="imgs/3vys.png">
+/odpoved/10/vysvetleni/<img src="imgs/ulohy/3vys.png">
