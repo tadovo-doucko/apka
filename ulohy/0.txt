@@ -1,8 +1,10 @@
 Nádrže na mléko
 <i>Ve třech mlékárenských nádržích bylo dohromady 13m³ mléka.
 <br>
+<br>
 V první nádrži bylo dvakrát více mléka než ve druhé nádrži.
+<br>
 <br>
 Po odčerpání 400l mléka z každé nádrže zbylo ve třetí nádrži 1,5krát více mléka než v první nádrži.</i>
 <h2>Kolik litrů mléka bylo v první nádrži po odčerpání?</h2>
-/odpoved/4000/vysvetleni/<div style="font-size:20px">Správá odpověď je 4000l. Vytvoříme rovnice:<br>y = x/2<br>z = 1,5x - 200<br>a dosadíme do rovnice:<br>x + x/2 + 1,5x - 200 = 13000</div>
+/odpoved/4000/vysvetleni/<div style="font-size:32px">Správá odpověď je 4000l. Vytvoříme rovnice:<br>y = x/2<br>z = 1,5x - 200<br>a dosadíme do rovnice:<br>x + x/2 + 1,5x - 200 = 13000</div>
