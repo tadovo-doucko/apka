@@ -1,11 +1,11 @@
 Jak neopakovat hloupé chyby ❌
 <i>budu navazovat na ten post</i><br>
 vpodstatě si stačí jen uvědomit, že když uděláme chybu, tak místo toho, abychom řekli jenom "hmmmmmmmm... to určitě příště neudělám"<br>
-tak se zamyslel, proč jsem tu chybu vůbec udělal, a jak se tomu příště vyhnout.<br><br>
-Například řešení, že podtrhávám jestli zaškrtávám špatné nebo správné možnosti. Viděl jsem i, že si někdo píše buď: 3❌ 1✅, nebo
-3✅ 1❌(3 dobře 1 špatně, takže hledám jeden špatnej) atd.<br><br>
-A pak je další level, začít psát na jedno místo, takže si můžeš svou strategii kdykoliv přečíst a zopakovat.<br><br>
+tak se zamyslel, proč jsem tu chybu vůbec udělal, a jak se tomu příště vyhnout.
+Například řešení, že podtrhávám, jestli zaškrtávám špatné, nebo správné možnosti. Viděl jsem, i že si někdo píše buď:<br>3❌ 1✅,<br>nebo<br>
+3✅ 1❌<br>(3 dobře 1 špatně, takže hledám jeden špatnej) atd.<br><br>
+A pak další level je začít psát tydle věci na jedno místo (např tabulka), takže si můžeš svou strategii kdykoliv přečíst a zopakovat.<br><br>
 Já jsem všechno měl ve svý online tabulce a pak na den přímaček jsem se na to před testem podíval a přesně věděl, jak se vyvarovat všem těm chybám, co bych mohl udělat.
 <br><br>
 Někdy i zjistíš, že ta chyba nebyla hloupá, ale jenom si nerozumněl nějakýmu tématu a tak třeba zjistíš, co se jestě musíš doučit/zopakovat.<br>A časem ti ty
-chyby co můžeš udělat prostě dojdou :)
+chyby, co můžeš udělat prostě dojdou :)
