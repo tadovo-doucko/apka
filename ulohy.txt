@@ -1,5 +1,9 @@
+;|5!2023-2-15
+Náhodná #2
+rychlá úloha na rovnici o vícero neznámých.
 ;|4!2023-2-14
-Testovací
+Náhodná #1
+rychlá úloha na rovnici o vícero neznámých.
 ;|0
 Vizuální na obsah
 rychlá úloha na vypočítání obsahu
