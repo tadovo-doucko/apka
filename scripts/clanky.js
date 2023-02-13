@@ -10,11 +10,16 @@ function parse_ulohy(ulohy_string){
   ulohy.shift();
   for(i=0; i < ulohy.length; i++){
     lines = ulohy[i].split("\n");
+    // time restrictions
+    if (lines[0].split("!").length > 1 && (new Date(lines[0].split("!")[1]).getTime() - Date.now().getTime()) > 0){
+      continue;
+    }
+
     description = "";
     for(x = 2; x < lines.length; x++){
       description += format_string_effects(lines[x]) + ((x >= lines.length - 1) ? "" : "<br>");
     }
-    document.getElementById("selection").innerHTML += '<div class="box-link" onClick="otevrit_clanek(' + i.toString() +')"><h1>'+ lines[1] +'</h1><h2>'+ description +'</h2></div><br>';
+    document.getElementById("selection").innerHTML += '<div class="box-link" onClick="otevrit_clanek(' + lines[0].split("!") +')"><h1>'+ lines[1] +'</h1><h2>'+ description +'</h2></div><br>';
   }
   document.getElementById("loading").style.display = "none";
 }
