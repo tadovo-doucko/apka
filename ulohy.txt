@@ -1,14 +1,14 @@
-;|5!2023-2-13
+;|4!2023-2-14
 Testovací
-;|1
+;|0
 Vizuální na obsah
 rychlá úloha na vypočítání obsahu
-;|2
+;|1
 Minutová rovnice
 malá rychlá rovnice
-;|3
+;|2
 Nádrže na mléko
 slovní úloha na několik rovnic o několika neznámých
-;|4
+;|3
 Pythagorova věta
 úloha na výpočetní geometrii (používejte pythagorejské trojce)
