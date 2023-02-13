@@ -11,7 +11,7 @@ function parse_ulohy(ulohy_string){
   for(i=0; i < ulohy.length; i++){
     lines = ulohy[i].split("\n");
     // time restrictions
-    if (lines[0].split("!").length > 1 && (new Date(lines[0].split("!")[1]).getTime() - Date.now().getTime()) > 0){
+    if (lines[0].split("!").length > 1 && (new Date(lines[0].split("!")[1]).getTime() - Date.now()) > 0){
       continue;
     }
 
