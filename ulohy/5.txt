@@ -2,4 +2,4 @@ Náhodná #2
 Pepa a František mají dohromady velké jmění o 140 korunách, <br>
 Pepa má 6x víc než František.
 Kolik korun přispívá František do fondu?
-/odpoved/20/vysvetleni/Úloha na 2 neznámé o 2 rovnicích.<br>p + f = 140;<br>p = 6f<br>Po vyřešní zjistíme, že František má 20kč a Pepa 140kč.
+/odpoved/20/vysvetleni/<div style="font-size:25px;line-height:25px;">Úloha na 2 neznámé o 2 rovnicích.<br>p + f = 140;<br>p = 6f<br>Po vyřešní zjistíme, že František má 20kč a Pepa 140kč.</div>
