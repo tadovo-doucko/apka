@@ -1,9 +1,12 @@
-;|5!2023-2-15
+;|5!2023-2-16
 Náhodná #2
 rychlá úloha na rovnici o vícero neznámých.
-;|4!2023-2-14
+;|4!2023-2-15
 Náhodná #1
 rychlá úloha na výpočetní geometrii
+;|6
+Rychlá na vyjadřování závislostí
+sus obojky
 ;|0
 Vizuální na obsah
 rychlá úloha na vypočítání obsahu
