@@ -4,4 +4,4 @@ Václav, Jana a Hozna z nějakého důvodu legálně zbírají psí obojky.<br>
 <i>Hozna</i> má o 3 obojky víc než <i>Jana</i>, vede ale <i>Václav</i>, má 3x víc obojků než <i>Jana</i><br>
 V závislosti na Honzově počtu obojů vyjádři kolik jich má Václav.<br>
 (Označme počet honzových obojků jako h)
-/odpoved/3h-9/vysvetleni/<div style="font-size:25px;line-height:25px;">3h-9<br>Jana má o 3 obojky míň:<br>b - 3<br>má Václav 3x víc než Jana<br>3×(b-3) = 3b-9</div>
+/odpoved/3h-9/vysvetleni/<div style="font-size:25px;line-height:25px;">3h-9<br>Jana má o 3 obojky míň:<br>h - 3<br>má Václav 3x víc než Jana<br>3×(h-3) = 3h-9</div>
