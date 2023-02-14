@@ -3,4 +3,4 @@ Máme obdelník o velikosti 8cm x 15cm<br>
 <img src="imgs/ulohy/5.png" style="width:90%; max-width:500px;"><br>
 Rozstřihneme ho a utvoříme nový útvar.
 <i>Jaký je obvod nového útvaru v cm?</i>
-/odpoved/64/vysvetleni/Stačí vypočítat pyt. větu, zjistíme, že nově utvořená hrana má 17cm.<br>(můžem si pomoct i pyt. troj. 8;15;17)<br>Pak sečteme 15 + 15 + 17 + 17 = 64cm
+/odpoved/64/vysvetleni/<span style="font-size:25px;">Stačí vypočítat pyt. větu, zjistíme, že nově utvořená hrana má 17cm.<br>(můžem si pomoct i pyt. troj. 8;15;17)<br>Pak sečteme 15 + 15 + 17 + 17 = 64cm</span>
