@@ -1,4 +1,4 @@
-Náhodná #1
+Náhodná #2
 Máme obdelník o velikosti 8cm x 15cm<br>
 <img src="imgs/ulohy/5.png" style="width:90%; max-width:500px;"><br>
 Rozstřihneme ho a utvoříme nový útvar.
