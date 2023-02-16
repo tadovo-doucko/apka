@@ -1,0 +1,5 @@
+Náhodná #3
+Dno podivně malého bazénu má 5x5 dm.<br>
+Do bázénu přitéká voda rychlostí 5 litrů za minutu.<br>
+Jaká je výška hladiny vody (dm) v bazénu, pokud byl přítok otevřený 1 hodinu?
+/odpoved/12/vysvetleni/<div style="font-size:25px;line-height:25px;">12, za 60 min přiteče 300l, dno má 25dm². 300/25 = 12</div>
