@@ -1,9 +1,12 @@
-;|5!2023-2-15
-Náhodná #1
-rychlá úloha na rovnici o vícero neznámých.
+;|7!2023-2-17
+Náhodná #3
+rychlovka na přítok vody
 ;|4!2023-2-16
 Náhodná #2
 rychlá úloha na výpočetní geometrii
+;|5!2023-2-15
+Náhodná #1
+rychlá úloha na rovnici o vícero neznámých.
 ;|6
 Rychlá na vyjadřování závislostí
 sus obojky
