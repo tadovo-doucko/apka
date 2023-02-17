@@ -1,3 +1,6 @@
+;|8!2023-2-18
+Náhodná #4
+odvození úhlů v šestiúhelníku
 ;|7!2023-2-17
 Náhodná #3
 rychlovka na přítok vody
