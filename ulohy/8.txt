@@ -1,0 +1,5 @@
+Náhodná #4
+Máme šestiúhelník. <br>
+<img src="imgs/ulohy/8.png" style="width:90%; max-width:500px;"><br>
+Kolik stupňů má modrý úhel alfa?
+/odpoved/30/vysvetleni/30°<br><img src="imgs/ulohy/8vys.png" style="width:90%; max-width:500px;">
