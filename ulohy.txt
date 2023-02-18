@@ -1,3 +1,6 @@
+;|9!2023-2-19
+Náhodná #5
+dělba práce
 ;|8!2023-2-18
 Náhodná #4
 odvození úhlů v šestiúhelníku
