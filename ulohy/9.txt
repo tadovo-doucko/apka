@@ -1,0 +1,5 @@
+Náhodná #5
+3 dělníci postaví 4 zdi za 2 hodiny.<br>
+Z neznámých důvodů je potřeba postavit 14 zdí do 2 hodinbr>
+Kolik je nejmenší počet dělníků, aby se všechny zdi do 2 hodin postavily?
+/odpoved/11/vysvetleni/<div style="font-size:25px;line-height:25px;">11,<br>3 dělníci postaví 2 zdi za 1h, 1 dělník postaví 2/3 zdi za 1h<br>na 14 zdí za 2h budeme potřebovat 10,5 dělníků, a tak najmem 11.</div>
