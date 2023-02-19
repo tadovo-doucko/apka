@@ -1,0 +1,9 @@
+Náhodná #6
+Řidič vyjel na chatu, ale než dojel píchl pneumatiku a zavolal odtahovku.<br>
+V servisu byl opraven defekt na řidičově pneumatice.<br>
+A on zas vyjel na směrem k chatě rychlostí 80km/h.<br>
+po 45 minutách znova píchl a on musel znovu volat odtahovku.<br>
+Ta za ním vyjela rychlostí 60km/h.<br>
+Dojela a hned opravila defekt.<br>
+Kolik MINUT uběhlo mezi první a druhou opravou?
+/odpoved/105/vysvetleni/<div style="font-size:25px;line-height:25px;">105,<br>Řidič ujel 60km za 45 minut (80 × 3/4 = 60)<br>Odtahovka musela ujet vzdálenost 60km.<brRychlostí 60km/h to ujeli za 1h = 60min<br>45 + 60 = 105min</div>
