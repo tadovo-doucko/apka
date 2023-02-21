@@ -1,0 +1,6 @@
+Rychlá jednoduchá rovnice
+Alžběta a Ben si šetří peníze.<br>
+Alžběta začla na 280kč a šetří si 40kč každý měsíc.<br>
+Ben sice začal na 40kč, ale šetří si 70kč každý měsíc.<br>
+Kolik měsíců bude trvat než Ben bude mít stejně jako Alžběta?
+/odpoved/8/vysvetleni/<div style="font-size:25px;line-height:25px;">8, stačí jen postavit rovnici<br>280 + 40x = 70x + 40,<br> a vyřešit ji 240 = 30x<br>x = 8</div>
