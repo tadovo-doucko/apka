@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" charset='utf-8'>
+  <meta name="human">
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <link rel="stylesheet" href="style.css">
+  <title>Tádovo Doučko</title>
+  </head>
+  <body>
+    <div id="main">
+        <img src="imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
+        <h2 style="text-align: center; font-size: xx-large;">Rychlokurz</h2> 
+        <h1 class='nadpis'>Jak se efektivě učit na přijímačky</h1>
+        <div class="floating_text" style="top: 100px; right: 50px;animation: rotation_toandfro 10s infinite;">7x + 1 = 8</div>
+        <div class="floating_text" style="top: 100px; left: 50px;animation: rotation_froandto 10s infinite;">🎓</div>
+        <div id="nadpis_line" style="width:90%; height: 5px; background: #FFF; position: relative; left: 50%; transform: translateX(-50%);transition: width 0.1s;"></div>
+        <div style="text-align: center; color:white;">
+          <h2 style="color:white">DVOUTÝDENÍ RYCHLOKURZ ZDARMA</h2>
+          <h1 style="font-size: 50px; text-decoration: underline;">Program❓ </h1>
+          <div class="infoblock">
+            <h1>I</h1>
+            <h2>• metoda jak se <span class="red">effektivě</span> učit na <span class="red">přijímačky</span></h2>
+            <h2>• aplikujeme metodu v praxi</h2>
+            <h2>• zjistíme na co by se každý měl zaměřit</h2>
+            <h2>• zaměříme se na to</h2>
+            <h2>• to je celý cyklus</h2>
+          </div>
+            <h1 style="font-size: 50px; text-decoration: underline;">Jak metoda funguje❓ </h1>
+          <div class="infoblock">
+            <h2><div>• metodu jak se <span class="red">effektivě</span> učit na <span class="red">přijímačky</span></div></h2>
+            <h2>• aplikujeme metodu v praxi</h2>
+            <h2>• osobní pozornost v malé skupince</h2>
+            <h2>• zjistíme na co by se každý měl nadále zaměřit</h2>
+          </div>
+          <div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+        </div>
+    </div>
+    <style>
+      .nadpis{
+        font-size: 70px;
+        margin-top: 0px;
+      }
+      .infoblock{
+        background: #262626;
+        border-radius: 30px;
+        padding: 20px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        left: 50%;
+        transform: scale(1.0) translateX(-50%);
+        box-shadow: rgba(0, 0, 0, 0.839) 0px 10px 50px 4px;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      .infoblock:hover{
+        box-shadow: rgba(0, 0, 0, 0.839) 0px 20px 50px 15px;
+      }
+      h2{
+        color:white;
+        font-size: 25px;
+      }
+      .red{
+        color:#FF0F53;
+      }
+      .floating_text{
+        color: black;
+        position: absolute;
+        animation-timing-function: ease-in-out;
+        font-size: 25px;
+      }
+      .circle_point{
+        color:white;
+        font-size: 25px;
+        background: #262626;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      .circle_point div{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @keyframes rotation_toandfro{
+        0% {transform: rotateZ(30deg);}
+        50% {transform: rotateZ(10deg);}
+        100% {transform: rotateZ(30deg);}
+      }
+      @keyframes rotation_froandto{
+        0% {transform: rotateZ(-30deg);}
+        50% {transform: rotateZ(-10deg);}
+        100% {transform: rotateZ(-30deg);}
+      }
+    </style>
+    <script src="scripts/lista.js"></script>
+    <script>
+    add_lista("")
+    window.setInterval('scroll_line_update()', 10)
+    function scroll_line_update(){
+      document.getElementById('nadpis_line').style.width = Math.max(0, (320 - document.documentElement.scrollTop) / 4) + "%"
+    }
+    </script>
+  </body>
+</html>
