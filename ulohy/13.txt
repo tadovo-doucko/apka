@@ -1,0 +1,6 @@
+Poměry a pythagorova věta
+Máme pravoúhlá trojúhelník<br>
+Přepona má 15cm a odvěsny má v poměru 3:4.<br>
+<img src="imgs/ulohy/13.png" style="width:90%; max-width:500px;"><br>
+Kolik cm má nejkratší strana trojúhelníku?
+/odpoved/9/vysvetleni/<div style="font-size:25px;line-height:25px;">9, řekněme, že odvěsny mají 3cm a 4cm, pak by měla přepona 5cm, ale má 15, 3x víc, takže reálně musí nejkratší strana být 3cm × 3 = 9cm</div>
