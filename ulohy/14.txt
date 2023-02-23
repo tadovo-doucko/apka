@@ -1,0 +1,4 @@
+Časová rychlovka
+Jenom jednoduchá rychlá úloha na převody, většinou obdobný bývají v testech hned jako první.<br>
+Kolik minut je 0.25 dne a 180 sekund?
+/odpoved/483|483min|438 minut/vysvetleni/<div style="font-size:25px;line-height:25px;">483,<br>0.25 dne => 6 h = 480 min + <br>180s => 3 min<br>= 483 minut</div>
