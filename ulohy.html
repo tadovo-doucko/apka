@@ -53,7 +53,7 @@
         document.getElementById('loading').style.display = "none";
       }
       function submit(){
-        correct = ODPOVED.split("/vysvetleni/")[0] == document.getElementById('odpoved').value
+        correct = ODPOVED.split("/vysvetleni/")[0].split("|").includes(document.getElementById('odpoved').value)
         
         document.getElementById('result').style.display = 'block'
         document.getElementById('result').style.background = ['#f71717', '#4dbe21'][correct ? 1 : 0]
