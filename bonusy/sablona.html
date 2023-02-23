@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" charset='utf-8'>
+  <meta name="human">
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <link rel="stylesheet" href="../style.css">
+  <title>Tádovo Doučko</title>
+  </head>
+  <body>
+    <div id="main">
+        <img src="../imgs/icon.png" style="position: absolute; top: 10px; left: 10px; width: 40px;">
+        <h1 class='nadpis'>Šablona na analýzu test</h1>
+        <div class="floating_text" style="top: 100px; right: 50px;animation: rotation_toandfro 10s infinite;">🧮</div>
+        <div class="floating_text" style="top: 100px; left: 50px;animation: rotation_froandto 10s infinite;">🎓</div>
+        <div id="nadpis_line" style="width:90%; height: 5px; background: #FFF; position: relative; left: 50%; transform: translateX(-50%);transition: width 0.1s;"></div>
+        <div style="text-align: center; color:white;">
+          <h2 style="color:white">zdarma ke stažení</h2>
+
+          <br>
+          <h1 class="podnadpis">ke stažení:</h1>
+          <h2>vyberte si:</h2>
+          <div class="infoblock">
+            <h1>Google Tabulky</h1>
+            <h2><a href="https://docs.google.com/spreadsheets/d/1eJ_vPD6H8qw2txzZvjM9TBOfFBrTnkx_etcfe7-Ngyg/edit?usp=sharing" target="_blank">• link zde: <span class="red">google tabulky</span></a></h2>
+            <h2>• Klikněte SOUBOR / VYTVOŘIT KOPII a sní si můžete dělat cokoliv</h2>
+            <h1>Stáhnout soubor</h1>
+            <h2><a href="https://raw.githubusercontent.com/tadovo-doucko/apka/main/bonusy/Šablona analýzi testu.xlsx" download>• <span class="red">stáhnout soubor</span></a></h2>
+          </div>
+          <br>
+          <h1 class="podnadpis">Jak ji používat❓</h1>
+          <div class="infoblock" style="text-align: left;">
+            <h2>1) NAPSAT TEST</h2>
+            <h2 style="tab-size: 4;">2)ZKOPÍROVAT ŠABLONU -<br> 
+              &emsp;a) vyberte držením oblast od DATA po CELKOVÉ POUČENÍ<br>
+              &emsp;b) KOPÍRUJTE - PC(CTRL + C) / MOBIL(PODRŽTE, PAK ZMÁČKNĚTE KOPÍROVAT)</h2>
+            <h2>3)VLOŽTE POD TU PŘEDEŠLOU - PC(CTRL + V) / MOBIL(PODRŽTE, PAK ZMÁŠKNĚTE VLOŽIT)</h2>
+            <h2>4) DOPLNTĚ BODY Z TESTU DO KOLONEK (NĚKDE MOŽNÁ BUDE CHYBĚT/PŘEBÝVAT KOLOKA, KDYŽTAK UPRAVTE)</h2>
+            <h2>5) DOPORUČUJI ZABARVIT PRO LEPŠÍ PŘEHLED</h2>
+            <h2>6) TAM MÁTE CHYBU VYPLNĚ ZBÝVAJÍCÍ SLOUPCE</h2>
+            <h2>7) A MÁTE PŘEHLED KDE CHYBUJETE A NA CO SE JEŠTĚ MUSÍTE ZAMĚŘIT</h2>
+          </div>
+          <br>
+          <h1 class="podnadpis">K čemu❓</h1>
+          <div class="infoblock">
+            <h2>Většina rad na přípravu na přijímací zkoušky je si 
+            prostě dělat testy. To samozřejmě, ale když děláme
+            tupě test za testem, tak se sice zlepšujeme, nicméně
+            jde to pomalu a je to matoucí.
+            Mnohem lepší je, si pokaždém testu ho projít znovu.
+            Zhodnotit, kde a proč jsme chyboval, třeba zjistím, 
+            že dělám rovnice hrozně pomalu, a tak začnu počítat
+            jednu za druhou, dokud se nezrychlím. Můžu i najít
+            celou oblast učiva, které vůbec nerozumím, a jdu se ji
+            naučit. Nakonec pak člověk zjistí, že už vlastně vůbec nechybuje, a může jít sebevědomě a bez stressu na zkoušky!</h2>
+          </div>
+          <br><br><br><br><br>
+          <h2>Přeji hodně štěstí k přijímačkám</h2>
+        </div>
+    </div>
+    <style>
+      .nadpis{
+        font-size: 70px;
+        margin-top: 0px;
+      }
+      .podnadpis{
+        font-size: 50px;
+        text-decoration: underline;
+        margin-top: 80px;
+      }
+      .infoblock{
+        margin-top: 20px;
+        background: #262626;
+        border-radius: 30px;
+        padding: 20px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        box-shadow: rgba(0, 0, 0, 0.839) 0px 10px 50px 4px;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+      }
+      .infoblock:hover{
+        box-shadow: rgba(0, 0, 0, 0.839) 0px 20px 50px 15px;
+      }
+      .infoblock h1{
+        color:#FF0F53;
+        text-decoration: underline;
+        font-size: 35px;
+      }
+      h2{
+        color:white;
+        font-size: 25px;
+      }
+      .red{
+        color:#FF0F53;
+      }
+      .floating_text{
+        color: black;
+        position: absolute;
+        animation-timing-function: ease-in-out;
+        font-size: 25px;
+      }
+      .circle_point{
+        color:white;
+        font-size: 25px;
+        background: #262626;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      .circle_point div{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @keyframes rotation_toandfro{
+        0% {transform: rotateZ(30deg);}
+        50% {transform: rotateZ(10deg);}
+        100% {transform: rotateZ(30deg);}
+      }
+      @keyframes rotation_froandto{
+        0% {transform: rotateZ(-30deg);}
+        50% {transform: rotateZ(-10deg);}
+        100% {transform: rotateZ(-30deg);}
+      }
+      .tyden_den{
+        background:#FFF;
+        width: 30px;
+        height: 30px;
+        border-radius: 12px;
+        display: inline-block;
+      }
+      #zapis{
+        font-size: 45px;
+        background: #262626;
+        padding: 20px;
+        color: #FF0F53;
+        box-shadow: rgba(0, 0, 0, 0.839) 0px 10px 50px 4px;
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      #zapis:hover{
+        box-shadow: rgba(0, 0, 0, 0.839) 0px 20px 50px 15px;
+      }
+    </style>
+    <script src="../scripts/lista.js"></script>
+    <script>
+    add_lista("tipy", "../")
+    window.setInterval('scroll_line_update()', 10)
+    var infoblocks = Array.from(document.getElementsByClassName("infoblock"));
+    console.log(infoblocks);
+    window.setInterval('infoblock_fade(infoblocks[0])', 10);
+    window.setInterval('infoblock_fade(infoblocks[1])', 10);
+    window.setInterval('infoblock_fade(infoblocks[2])', 10);
+    function scroll_line_update(){
+      document.getElementById('nadpis_line').style.width = Math.max(0, (320 - document.documentElement.scrollTop) / 4) + "%"
+    }
+    function infoblock_fade(element){
+      var opacity = Math.max(Math.min((Math.min((650 - element.getBoundingClientRect().top)) / 100), 1), 0)
+      //element.style.transform = "translateX(-50%) scale(" + opacity.toString() + ");"
+      element.style.opacity = opacity.toString();
+    }
+    </script>
+  </body>
+</html>
