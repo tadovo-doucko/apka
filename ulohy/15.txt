@@ -1,0 +1,6 @@
+Podivné machrování s cenou
+Hřebíky něco stojí.<br>
+Když přišel hřebíkový black friday, zlevnili se o polovinu.<br>
+Pak se zase o 50% zdražili.<br>
+Kolik % původní ceny teď stojí hřebíky?
+/odpoved/75|75%/vysvetleni/75%,<br> pozor základ procent, se pokaždé mění, <br> todle je častý "chyták". <br> Řekněme, že by cena začala na 100kč<br>100 o polovinu je 50 a to o polovinu víc je 75 => 75%
