@@ -1,0 +1,6 @@
+Podivný tvar
+Máme podivný tvar s neznámým obvodem y.<br>
+<img src="imgs/ulohy/16.png" style="width:90%; max-width:500px;"><br>
+Vyřízneme do podivného tvaru čtverec o stěně 1cm.<br>
+O kolik cm bude obvod větší?
+/odpoved/2|2cm/vysvetleni/<div style="font-size:25px;line-height:25px;">2cm,<br> tady je to jednoduché stačí přidat 2 × 1cm,<br> které čtverec vyřízl.</div>
