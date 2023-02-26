@@ -4,4 +4,4 @@ Teď si musí na zahradě vykopat díru ve tvaru válce.<br>
 Podstava válce má poloměr 2m a díra je hluboká 3m.<br>
 <img src="imgs/ulohy/11.png" style="width:90%; max-width:500px;"><br>
 Kolik m³ bude muset smolař vykopat? (Výsledek zaokhroulete na 2 desetiná místa)
-/odpoved/37,68/vysvetleni/<div style="font-size:25px;line-height:25px;">37,68,<br>πr² × v => 4×3,14 × 3 = 37,68</div>
+/odpoved/37,68|37.68/vysvetleni/<div style="font-size:25px;line-height:25px;">37,68,<br>πr² × v => 4×3,14 × 3 = 37,68</div>
