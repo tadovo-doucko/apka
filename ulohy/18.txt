@@ -1,0 +1,5 @@
+Spáč motorkář 🏍️
+Důsledný motorkář jede do práce vzdálené 25km rychlostí 50km/h<br>
+Druhý motorkář zaspal a vyjíždí o 20 min později.
+Kolik km/h musí jet, aby přijel přesně na čas, stejně s důsledným motorkářem?
+/odpoved/150km/h|150kmh|150/vysvetleni/150km/h, <br>První motorkář dojede za 30min, Druhý má jen 10min => 1/6h => 1/6 × x = 25km<br>x = 25 × 6 = 150km/h
