@@ -1,4 +1,4 @@
-Smolařovi pauzy
+Smolařovy pauzy
 Smolař prohrál sázku a teď musí vykopat díru o objemu 37m³
 Sám vykope 1m³ za 1h, ale pak si musí dát 30minut pauzu.<br>
 Za kolik hodin bude mít díru vykopanou (Pokud se rozhone po celou dobu nespat)?
