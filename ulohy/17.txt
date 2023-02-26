@@ -1,0 +1,5 @@
+Smolařovi pauzy
+Smolař prohrál sázku a teď musí vykopat díru o objemu 37m³
+Sám vykope 1m³ za 1h, ale pak si musí dát 30minut pauzu.<br>
+Za kolik hodin bude mít díru vykopanou (Pokud se rozhone po celou dobu nespat)?
+/odpoved/55|55h|55 hodin/vysvetleni/<div style="font-size:25px;line-height:25px;">55 hodin,<br>1m³ za 1h + 0.5h pauzy = 2/3m³ za hodinu.<br>Musí vykopat 37m³ => 37 ÷ 2/3 = 55,5,<br>ale tady pozor, posledních 0.5h je díra vykopana = 55h</div>
